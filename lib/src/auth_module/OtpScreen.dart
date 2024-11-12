@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:wavexpay/widget/button.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -107,30 +108,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
             ),
             SizedBox(height: 25.h), // Use ScreenUtil to scale height
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 15.w), // Use ScreenUtil for padding
-              child: SizedBox(
-                height: 50.h, // Use ScreenUtil to scale button height
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Handle button press
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                      HexColor("#05099F"),
-                    ),
-                  ),
-                  child: Text(
-                    "Done",
-                    style: TextStyle(
-                        fontSize: 20.sp,
-                        color: Colors.white), // Use ScreenUtil for font size
-                  ),
-                ),
-              ),
-            ),
+            CustomButton(label: "Done"),
             SizedBox(height: 10.h), // Use ScreenUtil to scale height
             Row(
               mainAxisAlignment: MainAxisAlignment.start,

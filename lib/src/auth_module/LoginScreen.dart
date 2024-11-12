@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:wavexpay/src/auth_module/OtpScreen.dart';
+import 'package:wavexpay/widget/button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -75,15 +75,34 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: IntlPhoneField(
-                decoration: const InputDecoration(
-
-                    // labelText: 'Phone Number',
-                    border: OutlineInputBorder(),
-                    counterText: ""),
-                initialCountryCode: 'US', // Default country code
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.grey[200], // Gray background color
+                  border: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: HexColor("#FFFFFF"), width: 2),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: HexColor("#FFFFFF"), width: 2),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide:
+                        BorderSide(color: HexColor("#FFFFFF"), width: 2),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  counterText: "", // Hides the counter text
+                ),
+                dropdownIconPosition: IconPosition.trailing,
+                dropdownIcon:
+                    const Icon(Icons.arrow_drop_down,),
+                initialCountryCode: 'IN', // Default country code
                 onChanged: (phone) {
-                  print(phone.completeNumber); // Full phone number
+                  //print(phone.completeNumber); // Full phone number
                 },
+                flagsButtonPadding: const EdgeInsets.only(right: 20),
               ),
             ),
             const SizedBox(
@@ -113,35 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             SizedBox(height: 25.h), // Use ScreenUtil to scale height
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 15.w), // Use ScreenUtil for padding
-              child: SizedBox(
-                height: 50.h, // Use ScreenUtil to scale button height
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    // Handle button press
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const OtpScreen()),
-                    );
-                  },
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(
-                      HexColor("#05099F"),
-                    ),
-                  ),
-                  child: Text(
-                    "Get OTP",
-                    style: TextStyle(
-                        fontSize: 20.sp,
-                        color: Colors.white), // Use ScreenUtil for font size
-                  ),
-                ),
-              ),
-            ),
+            CustomButton(label: "Get OTP"),
           ],
         ),
       ),

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:wavexpay/src/Pageview.dart';
 import 'package:wavexpay/src/auth_module/LoginScreen.dart';
-import 'package:wavexpay/src/auth_module/OtpScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
     );
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:PageviewScreen()
+      home:LoginScreen()
     );
   }
 }
