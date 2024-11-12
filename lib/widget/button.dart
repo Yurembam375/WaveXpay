@@ -4,7 +4,8 @@ import 'package:hexcolor/hexcolor.dart';
 
 class CustomButton extends StatelessWidget {
   final String label;
-  CustomButton({super.key, required this.label});
+  
+  const CustomButton({super.key, required this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: () {
-            // Handle button press
+            
           },
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(

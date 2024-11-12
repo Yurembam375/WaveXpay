@@ -1,9 +1,14 @@
+import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:wavexpay/widget/button.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wavexpay/router/router.gr.dart';
 
+
+@RoutePage()
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -12,17 +17,30 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final controller = PageController(initialPage: 1);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFFFFFF),
+      // backgroundColor: const Color(0xFFFFFFFF),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(height: 100.h), // Use ScreenUtil to scale height
+            SizedBox(height: 10.h), // Use ScreenUtil to scale height
             Image.asset(
               "assets/image/login.png",
+            ),
+            Center(
+              child: SmoothPageIndicator(
+                controller: controller,
+                count: 3,
+                effect: ExpandingDotsEffect(
+                    activeDotColor: HexColor("#05099F"),
+                    dotHeight: 8.h,
+                    dotWidth: 10.w,
+                    //  type: WormType.thinUnderground,
+                    dotColor: HexColor("#05099F")),
+              ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(
@@ -97,7 +115,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 dropdownIconPosition: IconPosition.trailing,
                 dropdownIcon:
-                    const Icon(Icons.arrow_drop_down,),
+                    Icon(Icons.arrow_drop_down, color: HexColor("#FFFFFF")),
                 initialCountryCode: 'IN', // Default country code
                 onChanged: (phone) {
                   //print(phone.completeNumber); // Full phone number
@@ -131,8 +149,38 @@ class _LoginScreenState extends State<LoginScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 25.h), // Use ScreenUtil to scale height
-            CustomButton(label: "Get OTP"),
+            SizedBox(height: 2.h), // Use ScreenUtil to scale height
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 10.h,
+                  horizontal: 15.w), // Use ScreenUtil for padding
+              child: SizedBox(
+                height: 50.h, // Use ScreenUtil to scale button height
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Handle button press
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const OtpScreen()),
+                    // );
+                    context.router.push(const OtpRoute());
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStateProperty.all(
+                      HexColor("#05099F"),
+                    ),
+                  ),
+                  child: Text(
+                    "Get OTP",
+                    style: TextStyle(
+                        fontSize: 20.sp,
+                        color: Colors.white), // Use ScreenUtil for font size
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
