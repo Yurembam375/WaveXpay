@@ -5,12 +5,13 @@ ThemeData lightMode = ThemeData(
     brightness: Brightness.light,
     colorScheme: ColorScheme.light(
       surface: HexColor("#FFFFFF"),
-      primary: HexColor("#ECECFA"),
+      primary: HexColor("#ECECFA")
     ));
 ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,
   colorScheme: ColorScheme.dark(
-      surface: HexColor("#0D0E34"), primary: HexColor("#3A3B59")),
+      surface: HexColor("#0D0E34"),
+       primary: HexColor("#3A3B59")),
 );
  
  

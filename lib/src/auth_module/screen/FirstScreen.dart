@@ -11,9 +11,11 @@ class FirstScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final controller = PageController(initialPage: 0);
     return Scaffold(
       //  backgroundColor: const Color(0xFFFFFFFF),
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

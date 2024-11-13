@@ -8,7 +8,7 @@ void main() {
   runApp(ChangeNotifierProvider(
     create: (context) => ThemeProvider(),
     child: MyApp(),
-  ));
+  ),);
 }
 
 class MyApp extends StatelessWidget {
