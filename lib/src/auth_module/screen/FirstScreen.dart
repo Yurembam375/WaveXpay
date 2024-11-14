@@ -101,7 +101,7 @@ class FirstScreen extends StatelessWidget {
                 //   context,
                 //   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 // );
-                context.router.push(const LoginRoute());
+               // context.router.push(const LoginRoute());
               },
               shape: RoundedRectangleBorder(
                 borderRadius:

@@ -10,9 +10,16 @@ class AppRouter extends RootStackRouter {
         ),
         AutoRoute(page: LoginRoute.page),
         AutoRoute(page: OtpRoute.page),
-        AutoRoute(page: Tire2screen.page, initial: true),
+        AutoRoute(
+          page: Tire2screen.page,
+        ),
         AutoRoute(
           page: Tire3screen.page,
-        )
+        ),
+        AutoRoute(page: DashboardRoute.page, initial: true, children: [
+          AutoRoute(page: Homescreen.page),
+          AutoRoute(page: Orscreen.page),
+          AutoRoute(page: Transectionscreen.page)
+        ])
       ];
 }

@@ -323,7 +323,7 @@ class _Tire2screenState extends State<Tire2screen> {
                           //   context,
                           //   MaterialPageRoute(builder: (context) => const LoginScreen()),
                           // );
-                          context.router.push( const Tire3screen());
+                      //    context.router.push( Tire2screen());
                         },
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(

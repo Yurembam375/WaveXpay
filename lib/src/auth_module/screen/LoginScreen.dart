@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     //   MaterialPageRoute(
                     //       builder: (context) => const OtpScreen()),
                     // );
-                    context.router.push(const OtpRoute());
+                  //  context.router.push(const OtpRoute());
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
