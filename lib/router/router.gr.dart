@@ -33,7 +33,7 @@ class DashboardRoute extends _i10.PageRouteInfo<void> {
   static _i10.PageInfo page = _i10.PageInfo(
     name,
     builder: (data) {
-      return _i1.DashboardScreen();
+      return const _i1.DashboardScreen();
     },
   );
 }
