@@ -85,7 +85,8 @@ class Orscreen extends StatelessWidget {
                             ),
                             fontWeight: FontWeight.bold,
                             fontSize: 20),
-                      ))
+                      ),
+                      )
                 ],
               ),
               SizedBox(

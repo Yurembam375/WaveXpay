@@ -1,7 +1,14 @@
+import 'dart:developer';
+
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:provider/provider.dart';
+import 'package:wavexpay/core/provider/theme/theme.dart';
+import 'package:wavexpay/core/provider/theme/themeProvider.dart';
+import 'package:wavexpay/router/router.gr.dart';
+import 'package:wavexpay/widget/travelCardWidget.dart';
 
 @RoutePage()
 class Homescreen extends StatelessWidget {
@@ -212,7 +219,9 @@ class Homescreen extends StatelessWidget {
                             style: TextStyle(fontSize: 20),
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              context.pushRoute(const Billscreen());
+                            },
                             child: Text(
                               "View All",
                               style: TextStyle(
@@ -241,7 +250,7 @@ class Homescreen extends StatelessWidget {
                                   "assets/image/recharge.png",
                                   height: 50,
                                   width: 40,
-                                  color: Colors.black,
+                                  //color: Colors.black,
                                 ),
                               ),
                             ),
@@ -266,7 +275,6 @@ class Homescreen extends StatelessWidget {
                                   "assets/image/credit.png",
                                   height: 50,
                                   width: 40,
-                                  color: Colors.black,
                                 ),
                               ),
                             ),
@@ -291,7 +299,6 @@ class Homescreen extends StatelessWidget {
                                   "assets/image/elc.png",
                                   height: 50,
                                   width: 40,
-                                  color: Colors.black,
                                 ),
                               ),
                             ),
@@ -316,7 +323,6 @@ class Homescreen extends StatelessWidget {
                                   "assets/image/ion_home-outline.png",
                                   height: 50,
                                   width: 40,
-                                  color: Colors.black,
                                 ),
                               ),
                             ),
@@ -341,7 +347,6 @@ class Homescreen extends StatelessWidget {
                                   "assets/image/boardband.png",
                                   height: 50,
                                   width: 40,
-                                  color: Colors.black,
                                 ),
                               ),
                             ),
@@ -358,142 +363,57 @@ class Homescreen extends StatelessWidget {
               ),
             ),
 
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Container(
-                height: 140.h,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.secondary,
-                    //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Travels",
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/flight.png",
-                                  height: 50,
-                                  width: 40,
-                                  color: HexColor("#05099F"),
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Flight",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/bus.png",
-                                  height: 50,
-                                  width: 40,
-                                  color: HexColor("#05099F"),
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Bus",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/train.png",
-                                  height: 50,
-                                  width: 40,
-                                  color: HexColor("#05099F"),
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Train",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/hotel.png",
-                                  height: 50,
-                                  width: 40,
-                                  color: HexColor("#05099F"),
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Hotels",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+            SizedBox(
+              height: 160,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  TravelCardWidget(
+                    title: "Travels",
+                    travelOptions: const [
+                      {
+                        "imagePath": "assets/image/flight.png",
+                        "label": "Flight"
+                      },
+                      {"imagePath": "assets/image/bus.png", "label": "Bus"},
+                      {"imagePath": "assets/image/train.png", "label": "Train"},
+                      {
+                        "imagePath": "assets/image/hotel.png",
+                        "label": "Hotels"
+                      },
+                    ],
+                    onOptionTap: (label) {
+                      log("Tapped on $label");
+                    },
+                  ),
+                  TravelCardWidget(
+                    title: "Travel Services",
+                    travelOptions: const [
+                      {
+                        "imagePath": "assets/image/Group 1351.png",
+                        "label": "Airport\nCabs"
+                      },
+                      {
+                        "imagePath": "assets/image/scuba 1.png",
+                        "label": "Travel\nActivities"
+                      },
+                      {
+                        "imagePath": "assets/image/logos_visa.png",
+                        "label": "Visa2\nFly"
+                      },
+                      {
+                        "imagePath": "assets/image/Group 1342.png",
+                        "label": "Travel\nInsurance"
+                      },
+                    ],
+                    onOptionTap: (label) {
+                      log("Tapped on $label");
+                    },
+                  ),
+                ],
               ),
             ),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -511,9 +431,9 @@ class Homescreen extends StatelessWidget {
                           WidgetStateProperty.all(2.0), // Shadow elevation
                       side: WidgetStateProperty.all(
                         BorderSide(
-                            color: HexColor("#05099F"),
-                           // width: 2.0
-                            ), // Border color and width
+                          color: HexColor("#05099F"),
+                          // width: 2.0
+                        ), // Border color and width
                       ),
                     ),
                     child: Text(
@@ -539,9 +459,9 @@ class Homescreen extends StatelessWidget {
                           WidgetStateProperty.all(2.0), // Shadow elevation
                       side: WidgetStateProperty.all(
                         BorderSide(
-                            color: HexColor("#05099F"),
-                           // width: 2.0
-                            ), // Border color and width
+                          color: HexColor("#05099F"),
+                          // width: 2.0
+                        ), // Border color and width
                       ),
                     ),
                     child: Text(
@@ -554,7 +474,7 @@ class Homescreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
 
             // Switch(
             //   value: Provider.of<ThemeProvider>(context).themeData ==

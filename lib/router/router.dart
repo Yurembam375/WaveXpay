@@ -20,6 +20,9 @@ class AppRouter extends RootStackRouter {
           AutoRoute(page: Homescreen.page),
           AutoRoute(page: Orscreen.page),
           AutoRoute(page: Transectionscreen.page)
-        ])
+        ]),
+        AutoRoute(
+          page: Billscreen.page,
+        )
       ];
 }
