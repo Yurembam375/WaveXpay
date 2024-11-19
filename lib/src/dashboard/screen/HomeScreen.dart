@@ -437,9 +437,9 @@ class Homescreen extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Movie Ticket",
+                      "Movie Ticket",maxLines: 1,
                       style: TextStyle(
-                        fontSize: 20.sp,
+                        fontSize: 15.sp,
                         color: Colors.black,
                       ), // Use ScreenUtil for font size
                     ),
@@ -467,7 +467,7 @@ class Homescreen extends StatelessWidget {
                     child: Text(
                       "Event Ticket",
                       style: TextStyle(
-                        fontSize: 20.sp,
+                        fontSize: 15.sp,
                         color: Colors.black,
                       ), // Use ScreenUtil for font size
                     ),
@@ -476,14 +476,14 @@ class Homescreen extends StatelessWidget {
               ],
             ),
 
-            // Switch(
-            //   value: Provider.of<ThemeProvider>(context).themeData ==
-            //       darkMode, // Check if dark mode is active
-            //   onChanged: (value) {
-            //     Provider.of<ThemeProvider>(context, listen: false)
-            //         .toggleTheme(); // Toggle the theme
-            //   },
-            // ),
+            Switch(
+              value: Provider.of<ThemeProvider>(context).themeData ==
+                  darkMode, // Check if dark mode is active
+              onChanged: (value) {
+                Provider.of<ThemeProvider>(context, listen: false)
+                    .toggleTheme(); // Toggle the theme
+              },
+            ),
           ],
         ),
       ),

@@ -120,9 +120,9 @@ class Billscreen extends StatelessWidget {
                                               ),
                                             ),
                                             child: Text(
-                                              "Pay Now",
+                                              "PayNow", maxLines: 1,
                                               style: TextStyle(
-                                                fontSize: 12.sp,
+                                                fontSize: 7.sp,
                                                 color: Colors.white,
                                               ), // Use ScreenUtil for font size
                                             ),
@@ -217,8 +217,8 @@ class Billscreen extends StatelessWidget {
                                       "Nikhil \n       8653009116",
                                       textAlign: TextAlign.center,
                                     ),
-                                    const SizedBox(
-                                      width: 250,
+                                    SizedBox(
+                                      width: 150.w,
                                     ),
                                     IconButton(
                                         onPressed: () {},
@@ -273,8 +273,9 @@ class Billscreen extends StatelessWidget {
                                         ),
                                         child: Text(
                                           "Recharge",
+                                          maxLines: 1,
                                           style: TextStyle(
-                                              fontSize: 11.sp,
+                                              fontSize: 7.sp,
                                               color: Colors.white,
                                               fontWeight: FontWeight
                                                   .bold), // Use ScreenUtil for font size

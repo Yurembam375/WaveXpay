@@ -8,11 +8,11 @@ class TravelCardWidget extends StatelessWidget {
   final Function(String label)? onOptionTap;
 
   const TravelCardWidget({
-    Key? key,
+    super.key,
     required this.title,
     required this.travelOptions,
     this.onOptionTap,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class TravelCardWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Container(
         height: 140.h,
-        width: 480,
+        width: 360.w,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(10),
