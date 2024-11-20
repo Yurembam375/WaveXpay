@@ -14,7 +14,7 @@ ThemeData darkMode = ThemeData(
   colorScheme: ColorScheme.dark(
     surface: HexColor("#0D0E34"),
     primary: HexColor("#3A3B59"),
-    onPrimaryContainer: HexColor("#CFCFEC"),
+    onPrimaryContainer: HexColor("#B5B5CE"),
     secondary: HexColor("#3A3B59"),
   ),
 );

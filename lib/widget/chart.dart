@@ -17,34 +17,36 @@ class Chart extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.3,
       decoration: BoxDecoration(
            color: Theme.of(context).colorScheme.primary,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(50),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
-            spreadRadius: 2,
-            blurRadius: 8,
-            offset: const Offset(0, 2),
+            spreadRadius: 2 ,
+            blurRadius: 1,
+            offset: const Offset(0, 1),
+             
           ),
         ],
       ),
       child: Column(
         children: [
+          const SizedBox(height:5),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13,vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "Income",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 15.sp,
                     color: HexColor("#8787BC"),
                   ),
                 ),
                 Text(
                   "Expense",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 15.sp,
                     color: HexColor("#8787BC"),
                   ),
                 )
@@ -52,21 +54,21 @@ class Chart extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 13),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "20000",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20.sp,
                       color: HexColor("#ED7D45"),
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "120308",
                   style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20.sp,
                       color: HexColor("#1819A6"),
                       fontWeight: FontWeight.bold),
                 )
@@ -74,36 +76,36 @@ class Chart extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 20.h,
-          ),
-          SfCartesianChart(
-            // plotAreaBackgroundColor: HexColor(
-            //     "#f0f0f0"), // Set the background color of the chart area
-            // plotAreaBorderColor: HexColor("#D3D3D3"),
-            primaryXAxis: const CategoryAxis(),
-            primaryYAxis: const NumericAxis(
-              isVisible: false, // Hide the Y-axis labels
+            height: 200.h,
+            child: SfCartesianChart(
+              // plotAreaBackgroundColor: HexColor(
+              //     "#f0f0f0"), // Set the background color of the chart area
+              // plotAreaBorderColor: HexColor("#D3D3D3"),
+              primaryXAxis: const CategoryAxis(),
+              primaryYAxis: const NumericAxis(
+                isVisible: false, // Hide the Y-axis labels
+              ),
+              series: <ColumnSeries<TransectionData, String>>[
+                // First series: Sales
+                ColumnSeries<TransectionData, String>(
+                  borderRadius: BorderRadius.circular(10),
+                  color: HexColor("#ED7D45"), // Sales color
+                  dataSource: data,
+                  xValueMapper: (TransectionData data, _) => data.year,
+                  yValueMapper: (TransectionData data, _) => data.sales,
+                  name: 'Sales', // Legend name for this series
+                ),
+                // Second series: Expenses
+                ColumnSeries<TransectionData, String>(
+                  color: HexColor("#0D0FA0"), // Expenses color
+                  borderRadius: BorderRadius.circular(10),
+                  dataSource: data,
+                  xValueMapper: (TransectionData data, _) => data.year,
+                  yValueMapper: (TransectionData data, _) => data.expenses,
+                  name: 'Expenses', // Legend name for this series
+                ),
+              ],
             ),
-            series: <ColumnSeries<TransectionData, String>>[
-              // First series: Sales
-              ColumnSeries<TransectionData, String>(
-                borderRadius: BorderRadius.circular(10),
-                color: HexColor("#ED7D45"), // Sales color
-                dataSource: data,
-                xValueMapper: (TransectionData data, _) => data.year,
-                yValueMapper: (TransectionData data, _) => data.sales,
-                name: 'Sales', // Legend name for this series
-              ),
-              // Second series: Expenses
-              ColumnSeries<TransectionData, String>(
-                color: HexColor("#0D0FA0"), // Expenses color
-                borderRadius: BorderRadius.circular(10),
-                dataSource: data,
-                xValueMapper: (TransectionData data, _) => data.year,
-                yValueMapper: (TransectionData data, _) => data.expenses,
-                name: 'Expenses', // Legend name for this series
-              ),
-            ],
           ),
         ],
       ),

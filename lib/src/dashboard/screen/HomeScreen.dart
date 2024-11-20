@@ -9,6 +9,7 @@ import 'package:wavexpay/core/provider/theme/theme.dart';
 import 'package:wavexpay/core/provider/theme/themeProvider.dart';
 import 'package:wavexpay/router/router.gr.dart';
 import 'package:wavexpay/widget/travelCardWidget.dart';
+import 'package:wavexpay/widget/viewAllbutton.dart';
 
 @RoutePage()
 class Homescreen extends StatelessWidget {
@@ -218,17 +219,11 @@ class Homescreen extends StatelessWidget {
                             "Bill & Recharge",
                             style: TextStyle(fontSize: 20),
                           ),
-                          TextButton(
-                            onPressed: () {
+                          Viewallbutton(
+                            onpress: () {
                               context.pushRoute(const Billscreen());
                             },
-                            child: Text(
-                              "View All",
-                              style: TextStyle(
-                                  color: HexColor("#05099F"),
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
+                          )
                         ],
                       ),
                     ),
@@ -362,7 +357,6 @@ class Homescreen extends StatelessWidget {
                 ),
               ),
             ),
-
             SizedBox(
               height: 160,
               child: ListView(
@@ -413,7 +407,6 @@ class Homescreen extends StatelessWidget {
                 ],
               ),
             ),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -437,7 +430,7 @@ class Homescreen extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      "Movie Ticket",maxLines: 1,
+                      "Movie Ticket", maxLines: 1,
                       style: TextStyle(
                         fontSize: 15.sp,
                         color: Colors.black,
@@ -451,17 +444,20 @@ class Homescreen extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ButtonStyle(
-                      backgroundColor:
-                          WidgetStateProperty.all(HexColor("#FFFFFF")),
+                      backgroundColor: WidgetStateProperty.all(
+                        Theme.of(context).colorScheme.primaryContainer,
+                      ),
                       shadowColor: WidgetStateProperty.all(
-                          HexColor("#05099F")), // Shadow color
-                      elevation:
-                          WidgetStateProperty.all(2.0), // Shadow elevation
+                        HexColor("#05099F"), // Shadow color
+                      ),
+                      elevation: WidgetStateProperty.all(
+                        2.0, // Shadow elevation
+                      ),
                       side: WidgetStateProperty.all(
                         BorderSide(
-                          color: HexColor("#05099F"),
-                          // width: 2.0
-                        ), // Border color and width
+                          color: HexColor("#05099F"), // Border color
+                          width: 2.0, // Border width
+                        ),
                       ),
                     ),
                     child: Text(
@@ -475,15 +471,14 @@ class Homescreen extends StatelessWidget {
                 ),
               ],
             ),
-
-            Switch(
-              value: Provider.of<ThemeProvider>(context).themeData ==
-                  darkMode, // Check if dark mode is active
-              onChanged: (value) {
-                Provider.of<ThemeProvider>(context, listen: false)
-                    .toggleTheme(); // Toggle the theme
-              },
-            ),
+            // Switch(
+            //   value: Provider.of<ThemeProvider>(context).themeData ==
+            //       darkMode, // Check if dark mode is active
+            //   onChanged: (value) {
+            //     Provider.of<ThemeProvider>(context, listen: false)
+            //         .toggleTheme(); // Toggle the theme
+            //   },
+            // ),
           ],
         ),
       ),

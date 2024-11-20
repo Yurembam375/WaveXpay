@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:wavexpay/widget/chart.dart';
+import 'package:wavexpay/widget/tranZwidget.dart';
+import 'package:wavexpay/widget/viewAllbutton.dart';
 
 @RoutePage()
 class Transectionscreen extends StatefulWidget {
@@ -60,127 +62,227 @@ class _TransectionscreenState extends State<Transectionscreen> {
             ),
           ],
         ),
-        body: Stack(
-          children: [
-            Column(
-              children: [
-                Stack(
-                  children: [
-                    Expanded(
-                      flex: 3,
-                      child: Container(
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  Stack(
+                    children: [
+                      Container(
                         height: 200.h,
                         color: HexColor("#1315A3"),
                       ),
-                    ),
-                    Positioned(
-                      top: 20,
-                      left: 30,
-                      right: 30,
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: ButtonsTabBar(
-                          height: 40.h,
-                          width: 100.w,
-                          radius: 50.r,
-                          contentCenter: true,
-                          backgroundColor: HexColor("#ED7D45"),
-                          labelStyle: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+                      Positioned(
+                        top: 20,
+                        left: 30,
+                        right: 30,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 5),
+                          child: ButtonsTabBar(
+                            height: 40.h,
+                            width: 100.w,
+                            radius: 50.r,
+                            contentCenter: true,
+                            backgroundColor: HexColor("#ED7D45"),
+                            labelStyle: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            unselectedBackgroundColor: HexColor("#8787BC"),
+                            unselectedLabelStyle: const TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            tabs: const [
+                              Tab(
+                                child: Text("Daily"),
+                              ),
+                              Tab(
+                                child: Text("Weekly"),
+                              ),
+                              Tab(
+                                child: Text("Monthly"),
+                              ),
+                            ],
                           ),
-                          unselectedBackgroundColor: HexColor("#8787BC"),
-                          unselectedLabelStyle: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          tabs: const [
-                            Tab(
-                              child: Text("Daily"),
-                            ),
-                            Tab(
-                              child: Text("Weekly"),
-                            ),
-                            Tab(
-                              child: Text("Monthly"),
-                            ),
-                          ],
                         ),
                       ),
-                    ),
-                  ],
-                ),
-                Expanded(
-                  flex: 7,
-                  child: Container(
-                    color: Theme.of(context).colorScheme.surface,
+                    ],
+                  ),
+                  SizedBox(
+                    height: 500.h,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: 120.h,
+                          height: 190.h,
                         ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15.w), // Use ScreenUtil for padding
-                          child: SizedBox(
-                            height:
-                                50.h, // Use ScreenUtil to scale button height
-                            width: double.infinity,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                  // borderSide:
-                                  //     BorderSide(color: Colors.grey.shade400),
-                                  borderRadius: BorderRadius.circular(30),
+                        Container(
+                          height: 300.h,
+                          color: Theme.of(context).colorScheme.surface,
+                          // color: Colors.pinkAccent,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 15.w,
+                                    vertical: 10), // Use ScreenUtil for padding
+                                child: SizedBox(
+                                  height: 50
+                                      .h, // Use ScreenUtil to scale button height
+                                  width: double.infinity,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.grey[
+                                          200], // Background color for TextField
+                                      borderRadius: BorderRadius.circular(30),
+                                    ),
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                          border: InputBorder
+                                              .none, // Remove the border
+                                          contentPadding: EdgeInsets.symmetric(
+                                              horizontal: 30.w,
+                                              vertical: 10.h
+                                                  .h), // Padding for text inside the TextField
+                                          hintText:
+                                              'Search by name, number or UPI ID',
+                                          // Optional hint text
+                                          hintStyle: const TextStyle(
+                                              color: Colors.grey),
+                                          prefixIcon: const Icon(
+                                            Icons.search,
+                                            size: 27,
+                                          ) // Optional hint style
+                                          ),
+                                    ),
+                                  ),
                                 ),
-                                focusedBorder: OutlineInputBorder(
-                                  // borderSide:
-                                  //     const BorderSide(color: Colors.black),
-                                  borderRadius: BorderRadius.circular(30),
-                                ),
-                                fillColor: Colors.grey[200],
-                                filled: true,                               
                               ),
-                            ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 22,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      height: 55.h,
+                                      width: 150.w,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          border:
+                                              Border.all(color: Colors.black)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: [
+                                          const Text(
+                                            "Download Statement",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Image.asset(
+                                            "assets/image/download.png",
+                                            height: 20,
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 55.h,
+                                      width: 80.w,
+                                      decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(20),
+                                          border:
+                                              Border.all(color: Colors.black)),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          const Text(
+                                            "Filter",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                          Image.asset(
+                                            "assets/image/mage_filter.png",
+                                            height: 20,
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 20),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Text(
+                                      "Recent Transfer",
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Viewallbutton(
+                                      onpress: () {
+                                        // showModalBottomSheet(
+                                        //   context: context,
+                                        //   builder: (BuildContext context) {
+                                        //     return const Expanded(
+                                        //       child: SizedBox(
+                                        //         child: Tranzwidget(),
+                                        //       ),
+                                        //     );
+                                        //   },
+                                        // );
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Expanded(
+                                child: SizedBox(
+                                  child: Tranzwidget(),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
                   ),
-                ),
-              ],
-            ),
-            Positioned(
-              top: 100,
-              left: 15,
-              right: 15,
-              child: Container(
-                decoration: BoxDecoration(
-                  // color: Colors.black,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 8,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
-                ),
-                height: 350.h,
-                child: const TabBarView(
-                  children: [
-                    Chart(
-                      viewType: "Daily",
-                    ),
-                    Chart(viewType: "Weekly"),
-                    Chart(viewType: "Monthly"),
-                  ],
+                ],
+              ),
+              Positioned(
+                top: 100,
+                left: 15,
+                right: 15,
+                child: SizedBox(
+                  height: 290.h,
+                  child: const TabBarView(
+                    children: [
+                      Chart(
+                        viewType: "Daily",
+                      ),
+                      Chart(viewType: "Weekly"),
+                      Chart(viewType: "Monthly"),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
