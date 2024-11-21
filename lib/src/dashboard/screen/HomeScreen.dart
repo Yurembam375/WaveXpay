@@ -4,10 +4,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:provider/provider.dart';
-import 'package:wavexpay/core/provider/theme/theme.dart';
-import 'package:wavexpay/core/provider/theme/themeProvider.dart';
 import 'package:wavexpay/router/router.gr.dart';
+import 'package:wavexpay/widget/billandRehargeCard.dart';
+import 'package:wavexpay/widget/moneyTanferCard.dart';
 import 'package:wavexpay/widget/travelCardWidget.dart';
 import 'package:wavexpay/widget/viewAllbutton.dart';
 
@@ -43,12 +42,11 @@ class Homescreen extends StatelessWidget {
         backgroundColor: HexColor("#04076E"),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.wallet,
-              color: Colors.white,
-            ),
-          ),
+              onPressed: () {},
+              icon: Image.asset(
+                "assets/image/walet.png",
+                height: 20.h,
+              )),
           IconButton(
             onPressed: () {},
             icon: const Icon(
@@ -104,94 +102,22 @@ class Homescreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: HexColor("#05099F")),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/contact.png",
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Pay To \nContact",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: HexColor("#05099F")),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/bank.png",
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "To Bank/\n UPI ID",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: HexColor("#05099F")),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/selfAcc.png",
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Self \n Account",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: HexColor("#05099F")),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/checkBal.png",
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Check \nBalance",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        MoneyTransferCard(
+                            title: "Pay To \nContact",
+                            imagePath: "assets/image/contact.png",
+                            onTap: () {}),
+                        MoneyTransferCard(
+                            title: "To Bank/\n UPI ID",
+                            imagePath: "assets/image/bank.png",
+                            onTap: () {}),
+                        MoneyTransferCard(
+                            title: "Self \n Account",
+                            imagePath: "assets/image/selfAcc.png",
+                            onTap: () {}),
+                        MoneyTransferCard(
+                            title: "Check \nBalance",
+                            imagePath: "assets/image/checkBal.png",
+                            onTap: () {}),
                       ],
                     )
                   ],
@@ -230,127 +156,27 @@ class Homescreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/recharge.png",
-                                  height: 50,
-                                  width: 40,
-                                  //color: Colors.black,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Recharge",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
+                        BillandRechargeCard(
+                          imagePath: "assets/image/recharge.png",
+                          label: "Recharge",
+                          onTap: () {},
                         ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/credit.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Credit",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/elc.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Electricity",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/ion_home-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Rent",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .primaryContainer),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/boardband.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Boardband",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        BillandRechargeCard(
+                            imagePath: "assets/image/credit.png",
+                            label: "Credit",
+                            onTap: () {}),
+                        BillandRechargeCard(
+                            imagePath: "assets/image/elc.png",
+                            label: "Electricity",
+                            onTap: () {}),
+                        BillandRechargeCard(
+                            imagePath: "assets/image/ion_home-outline.png",
+                            label: "Rent",
+                            onTap: () {}),
+                        BillandRechargeCard(
+                            imagePath: "assets/image/boardband.png",
+                            label: "Boardband",
+                            onTap: () {}),
                       ],
                     )
                   ],

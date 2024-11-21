@@ -47,12 +47,11 @@ class _TransectionscreenState extends State<Transectionscreen> {
           backgroundColor: HexColor("#1315A3"),
           actions: [
             IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.wallet,
-                color: Colors.white,
-              ),
-            ),
+                onPressed: () {},
+                icon: Image.asset(
+                  "assets/image/walet.png",
+                  height: 20.h,
+                )),
             IconButton(
               onPressed: () {},
               icon: const Icon(
@@ -145,7 +144,8 @@ class _TransectionscreenState extends State<Transectionscreen> {
                                               .none, // Remove the border
                                           contentPadding: EdgeInsets.symmetric(
                                               horizontal: 30.w,
-                                              vertical: 10.h
+                                              vertical: 10
+                                                  .h
                                                   .h), // Padding for text inside the TextField
                                           hintText:
                                               'Search by name, number or UPI ID',
@@ -236,16 +236,17 @@ class _TransectionscreenState extends State<Transectionscreen> {
                                     ),
                                     Viewallbutton(
                                       onpress: () {
-                                        // showModalBottomSheet(
-                                        //   context: context,
-                                        //   builder: (BuildContext context) {
-                                        //     return const Expanded(
-                                        //       child: SizedBox(
-                                        //         child: Tranzwidget(),
-                                        //       ),
-                                        //     );
-                                        //   },
-                                        // );
+                                        showModalBottomSheet(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return Expanded(
+                                              child: SizedBox(
+                                                height: 600.h,
+                                                child: const Tranzwidget(),
+                                              ),
+                                            );
+                                          },
+                                        );
                                       },
                                     ),
                                   ],

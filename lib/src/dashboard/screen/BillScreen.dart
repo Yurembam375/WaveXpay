@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:wavexpay/widget/actionCard.dart';
 
 @RoutePage()
 class Billscreen extends StatelessWidget {
@@ -64,75 +65,71 @@ class Billscreen extends StatelessWidget {
                           ),
                           Expanded(
                             flex: 7,
-                            child: Container(
-                              child: Column(
-                                children: [
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  Text(
-                                    "Get up to 500 rupees cashback",
-                                    style: TextStyle(
-                                        color: HexColor(
-                                          "#05099F",
-                                        ),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20),
-                                  ),
-                                  const SizedBox(
-                                    height: 5,
-                                  ),
-                                  const Text(
-                                    "on your first ever Credit Card \nBill payment with Wavexpay",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold),
-                                  ),
-                                  const SizedBox(
-                                    height: 5,
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        SizedBox(
-                                          height: 30
-                                              .h, // Use ScreenUtil to scale button height
-                                          width: 70.w,
-                                          child: ElevatedButton(
-                                            onPressed: () {},
-                                            style: ButtonStyle(
-                                              backgroundColor:
-                                                  WidgetStateProperty.all(
-                                                      HexColor("#05099F")),
-                                              shadowColor: WidgetStateProperty
-                                                  .all(HexColor(
-                                                      "#05099F")), // Shadow color
-                                              elevation:
-                                                  WidgetStateProperty.all(
-                                                      2.0), // Shadow elevation
-                                              side: WidgetStateProperty.all(
-                                                BorderSide(
-                                                  color: HexColor("#05099F"),
-                                                  // width: 2.0
-                                                ), // Border color and width
-                                              ),
-                                            ),
-                                            child: Text(
-                                              "PayNow", maxLines: 1,
-                                              style: TextStyle(
-                                                fontSize: 7.sp,
-                                                color: Colors.white,
-                                              ), // Use ScreenUtil for font size
+                            child: Column(
+                              children: [
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  "Get up to 500 rupees cashback",
+                                  style: TextStyle(
+                                      color: HexColor(
+                                        "#05099F",
+                                      ),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                const Text(
+                                  "on your first ever Credit Card \nBill payment with Wavexpay",
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      SizedBox(
+                                        height: 30
+                                            .h, // Use ScreenUtil to scale button height
+                                        width: 70.w,
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ButtonStyle(
+                                            backgroundColor:
+                                                WidgetStateProperty.all(
+                                                    HexColor("#05099F")),
+                                            shadowColor: WidgetStateProperty
+                                                .all(HexColor(
+                                                    "#05099F")), // Shadow color
+                                            elevation: WidgetStateProperty.all(
+                                                2.0), // Shadow elevation
+                                            side: WidgetStateProperty.all(
+                                              BorderSide(
+                                                color: HexColor("#05099F"),
+                                                // width: 2.0
+                                              ), // Border color and width
                                             ),
                                           ),
+                                          child: Text(
+                                            "PayNow", maxLines: 1,
+                                            style: TextStyle(
+                                              fontSize: 7.sp,
+                                              color: Colors.white,
+                                            ), // Use ScreenUtil for font size
+                                          ),
                                         ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ],
@@ -322,111 +319,24 @@ class Billscreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Mobile\nRecharge",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/fast.png",
-                                  height: 50,
-                                  width: 40,
-                                  color: HexColor("#05099F"),
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "FASTag\n Recharge",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/game-icons_radar-dish.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "DTH",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/hugeicons_money-bag-01.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Loan\nRepayment",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Mobile\nRecharge",
+                            imagePath:
+                                "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "FASTag\n Recharge",
+                            imagePath: "assets/image/fast.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "DTH",
+                            imagePath: "assets/image/game-icons_radar-dish.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Loan\nRepayment",
+                            imagePath:
+                                "assets/image/hugeicons_money-bag-01.png",
+                            onTap: () {}),
                       ],
                     )
                   ],
@@ -463,219 +373,47 @@ class Billscreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/ion_home-outline (1).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Rent",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/ion_water-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Water",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols_laptop-car-outline-sharp.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Electricity",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/Group 1220.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Cylinder",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Rent",
+                            imagePath: "assets/image/ion_home-outline (1).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Water",
+                            imagePath: "assets/image/ion_water-outline.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Electricity",
+                            imagePath:
+                                "assets/image/material-symbols_laptop-car-outline-sharp.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Cylinder",
+                            imagePath: "assets/image/Group 1220.png",
+                            onTap: () {}),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Pospaid",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols_laptop-car-outline-sharp (2).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Broadband",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/bi_credit-card-2-front.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Credit Card",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/Group 1222.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Pipe Gas",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Pospaid",
+                            imagePath:
+                                "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Broadband",
+                            imagePath:
+                                "assets/image/material-symbols_laptop-car-outline-sharp (2).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Credit Card",
+                            imagePath:
+                                "assets/image/bi_credit-card-2-front.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Pipe Gas",
+                            imagePath: "assets/image/Group 1222.png",
+                            onTap: () {}),
                       ],
                     )
                   ],
@@ -712,111 +450,23 @@ class Billscreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Mobile\nRecharge",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/fast.png",
-                                  height: 50,
-                                  width: 40,
-                                  color: HexColor("#05099F"),
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "FASTag\n Recharge",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/game-icons_radar-dish.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "DTH",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/teenyicons_tv-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Cable TV",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Mobile\nRecharge",
+                            imagePath:
+                                "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "FASTag\n Recharge",
+                            imagePath: "assets/image/fast.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "DTH",
+                            imagePath: "assets/image/game-icons_radar-dish.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Cable TV",
+                            imagePath: "assets/image/teenyicons_tv-outline.png",
+                            onTap: () {}),
                       ],
                     )
                   ],
@@ -853,110 +503,24 @@ class Billscreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/mdi_donation-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Donate",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols-light_folded-hands-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Devotion",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/twemoji_hindu-temple.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Ram Mandir",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/solar_hand-heart-linear.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Donate meal",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Donate",
+                            imagePath: "assets/image/mdi_donation-outline.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Devotion",
+                            imagePath:
+                                "assets/image/material-symbols-light_folded-hands-outline.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Ram Mandir",
+                            imagePath: "assets/image/twemoji_hindu-temple.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Donate meal",
+                            imagePath:
+                                "assets/image/solar_hand-heart-linear.png",
+                            onTap: () {}),
                       ],
                     )
                   ],
@@ -993,110 +557,24 @@ class Billscreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/wpf_recurring-appointment.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "LIC/\n Insurance",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/ion_home-outline (2).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Municipal Tax &\nServices",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/fluent-mdl2_recurring-event.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Recurring \nDeposit",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/Group (1).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "NSP",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "LIC/\n Insurance",
+                            imagePath:
+                                "assets/image/wpf_recurring-appointment.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Municipal Tax &\nServices",
+                            imagePath: "assets/image/ion_home-outline (2).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Recurring \nDeposit",
+                            imagePath:
+                                "assets/image/fluent-mdl2_recurring-event.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "NSP",
+                            imagePath: "assets/image/Group (1).png",
+                            onTap: () {}),
                       ],
                     ),
                     Padding(
@@ -1104,32 +582,11 @@ class Billscreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Column(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 60,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  // color: Theme.of(context)
-                                  //     .colorScheme
-                                  //     .primaryContainer
-                                ),
-                                child: Center(
-                                  child: Image.asset(
-                                    "assets/image/hugeicons_money-bag-01.png",
-                                    height: 50,
-                                    width: 40,
-                                  ),
-                                ),
-                              ),
-                              const Text(
-                                "Loan\n Repayment",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(fontWeight: FontWeight.bold),
-                              )
-                            ],
-                          ),
+                          ActionCard(
+                              title: "Loan\n Repayment",
+                              imagePath:
+                                  "assets/image/hugeicons_money-bag-01.png",
+                              onTap: () {}),
                         ],
                       ),
                     ),
@@ -1167,219 +624,47 @@ class Billscreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/pepicons-pencil_people.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Clubs& \n Association",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/mdi_house-city-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Apartments",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/Group (2).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Hospitals ",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/Frame (15).png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Buy FASTag",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Clubs& \n Association",
+                            imagePath:
+                                "assets/image/pepicons-pencil_people.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Apartments",
+                            imagePath:
+                                "assets/image/mdi_house-city-outline.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Hospitals ",
+                            imagePath: "assets/image/Group (2).png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Buy FASTag",
+                            imagePath: "assets/image/Frame (15).png",
+                            onTap: () {}),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/material-symbols_car-rental-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Rental",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/ph_device-mobile-thin.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "NCMC\nRecharge",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/lsicon_education-outline.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Education\nFees",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                                // color: Theme.of(context)
-                                //     .colorScheme
-                                //     .primaryContainer
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  "assets/image/cil_speedometer.png",
-                                  height: 50,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                            const Text(
-                              "Prepaid Meter",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            )
-                          ],
-                        ),
+                        ActionCard(
+                            title: "Rental",
+                            imagePath:
+                                "assets/image/material-symbols_car-rental-outline.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "NCMC\nRecharge",
+                            imagePath: "assets/image/ph_device-mobile-thin.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Education\nFees",
+                            imagePath:
+                                "assets/image/lsicon_education-outline.png",
+                            onTap: () {}),
+                        ActionCard(
+                            title: "Prepaid Meter",
+                            imagePath: "assets/image/cil_speedometer.png",
+                            onTap: () {}),
                       ],
                     )
                   ],
