@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wavexpay/router/router.gr.dart';
 
 @RoutePage()
 class FirstScreen extends StatelessWidget {
@@ -10,7 +11,6 @@ class FirstScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final controller = PageController(initialPage: 0);
     return Scaffold(
       //  backgroundColor: const Color(0xFFFFFFFF),
@@ -100,7 +100,7 @@ class FirstScreen extends StatelessWidget {
                 //   context,
                 //   MaterialPageRoute(builder: (context) => const LoginScreen()),
                 // );
-               // context.router.push(const LoginRoute());
+                context.router.push(const LoginRoute());
               },
               shape: RoundedRectangleBorder(
                 borderRadius:

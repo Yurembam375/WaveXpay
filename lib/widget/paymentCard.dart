@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
-class MoneyTransferCard extends StatelessWidget {
+
+class PaymentCard extends StatelessWidget {
   final String title;
   final String imagePath;
   final VoidCallback onTap;
 
-  const MoneyTransferCard({
+  const PaymentCard({
     super.key,
     required this.title,
     required this.imagePath,
@@ -24,7 +24,7 @@ class MoneyTransferCard extends StatelessWidget {
             width: 60,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: HexColor("#05099F"), // Default color
+              color: Colors.white, // Default color
             ),
             child: Center(
               child: Image.asset(

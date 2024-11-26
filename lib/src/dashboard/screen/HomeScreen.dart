@@ -18,10 +18,15 @@ class Homescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5),
-          child: CircleAvatar(
-            radius: 10,
+        leading: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
+          child: GestureDetector(
+            onTap: () {
+              context.router.push(const Profileandpayone());
+            },
+            child: const CircleAvatar(
+              radius: 10,
+            ),
           ),
         ),
         title: Row(
@@ -34,7 +39,9 @@ class Homescreen extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.router.push(const Profileandpayone());
+              },
               icon: Icon(Icons.arrow_drop_down, color: HexColor("#FFFFFF")),
             )
           ],
@@ -271,7 +278,7 @@ class Homescreen extends StatelessWidget {
                     onPressed: () {},
                     style: ButtonStyle(
                       backgroundColor: WidgetStateProperty.all(
-                        Theme.of(context).colorScheme.primaryContainer,
+                        Colors.white,
                       ),
                       shadowColor: WidgetStateProperty.all(
                         HexColor("#05099F"), // Shadow color

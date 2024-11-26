@@ -23,6 +23,9 @@ class AppRouter extends RootStackRouter {
         ]),
         AutoRoute(
           page: Billscreen.page,
+        ),
+        AutoRoute(
+          page: Profileandpayone.page,
         )
       ];
 }

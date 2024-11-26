@@ -1,9 +1,11 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:wavexpay/router/router.gr.dart';
 @RoutePage()
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -132,7 +134,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    // Handle button press
+                     context.router.push(const DashboardRoute());
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
