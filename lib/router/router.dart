@@ -16,7 +16,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: Tire3screen.page,
         ),
-        AutoRoute(page: DashboardRoute.page, initial: true, children: [
+        AutoRoute(page: DashboardRoute.page, children: [
           AutoRoute(page: Homescreen.page),
           AutoRoute(page: Orscreen.page),
           AutoRoute(page: Transectionscreen.page)
@@ -26,6 +26,10 @@ class AppRouter extends RootStackRouter {
         ),
         AutoRoute(
           page: Profileandpayone.page,
-        )
+        ),
+        AutoRoute(
+          page: Paytocontactscreen.page,
+        ),
+        AutoRoute(page: Paymentscreen.page, initial: true)
       ];
 }
