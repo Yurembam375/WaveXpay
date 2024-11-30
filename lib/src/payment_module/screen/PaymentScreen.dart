@@ -121,7 +121,50 @@ class Paymentscreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: const Center(child: Text("November 6, 2024"))),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 10),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Payment to Abhit",
+                            style: TextStyle(fontSize: 17),
+                          ),
+                          SizedBox(
+                            height: 10.h,
+                          ),
+                          const Text(
+                            "₹2000",
+                            style: TextStyle(
+                              fontSize: 30,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 50.h,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    "assets/image/Group 1180.png",
+                                    height: 10,
+                                  ),
+                                  SizedBox(
+                                    width: 5.w,
+                                  ),
+                                  const Text("Sent Securely"),
+                                ],
+                              ),
+                              const Text("9:21 pm")
+                            ],
+                          )
+                        ],
+                      ),
+                    )),
               ],
             ),
           ),
@@ -146,7 +189,7 @@ class Paymentscreen extends StatelessWidget {
                         20), // Border radius for the button
                   ),
                   child: const Text(
-                   "Pay",
+                    "Pay",
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),

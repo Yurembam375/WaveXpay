@@ -30,6 +30,9 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: Paytocontactscreen.page,
         ),
-        AutoRoute(page: Paymentscreen.page, initial: true)
+        AutoRoute(
+          page: Paymentscreen.page,
+        ),
+        AutoRoute(page: Wavexpaymentscreen.page, initial: true)
       ];
 }
