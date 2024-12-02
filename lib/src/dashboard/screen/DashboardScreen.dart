@@ -12,9 +12,9 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        Homescreen(),
-        Orscreen(), // Assuming Orscreen is the QR screen
-        Transectionscreen(),
+        HomeRoute(),
+        OrRoute(), // Assuming Orscreen is the QR screen
+        TransectionRoute(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return Stack(

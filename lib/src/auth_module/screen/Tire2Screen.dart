@@ -4,14 +4,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 @RoutePage()
-class Tire2screen extends StatefulWidget {
-  const Tire2screen({super.key});
+class Tire2Screen extends StatefulWidget {
+  const Tire2Screen({super.key});
 
   @override
-  State<Tire2screen> createState() => _Tire2screenState();
+  State<Tire2Screen> createState() => _Tire2ScreenState();
 }
 
-class _Tire2screenState extends State<Tire2screen> {
+class _Tire2ScreenState extends State<Tire2Screen> {
   bool isChecked = false;
   final TextEditingController houseController = TextEditingController();
   final TextEditingController roadController = TextEditingController();

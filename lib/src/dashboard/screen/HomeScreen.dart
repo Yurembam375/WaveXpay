@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:wavexpay/router/router.gr.dart';
-import 'package:wavexpay/widget/billandRehargeCard.dart';
-import 'package:wavexpay/widget/moneyTanferCard.dart';
-import 'package:wavexpay/widget/travelCardWidget.dart';
-import 'package:wavexpay/widget/viewAllbutton.dart';
+import 'package:wavexpay/src/dashboard/widget/billandRehargeCard.dart';
+import 'package:wavexpay/src/dashboard/widget/moneyTanferCard.dart';
+import 'package:wavexpay/src/dashboard/widget/travelCardWidget.dart';
+import 'package:wavexpay/src/dashboard/widget/viewAllbutton.dart';
 
 @RoutePage()
-class Homescreen extends StatelessWidget {
-  const Homescreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class Homescreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: GestureDetector(
             onTap: () {
-              context.router.push(const Profileandpayone());
+              context.router.push(const ProfileandpayoneRoute());
             },
             child: const CircleAvatar(
               radius: 10,
@@ -40,7 +40,7 @@ class Homescreen extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                context.router.push(const Profileandpayone());
+                context.router.push(const ProfileandpayoneRoute());
               },
               icon: Icon(Icons.arrow_drop_down, color: HexColor("#FFFFFF")),
             )
@@ -154,7 +154,7 @@ class Homescreen extends StatelessWidget {
                           ),
                           Viewallbutton(
                             onpress: () {
-                              context.pushRoute(const Billscreen());
+                              context.pushRoute( const BillRoute());
                             },
                           )
                         ],

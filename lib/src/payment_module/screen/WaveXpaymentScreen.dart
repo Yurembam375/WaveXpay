@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 @RoutePage()
-class Wavexpaymentscreen extends StatelessWidget {
-  const Wavexpaymentscreen({super.key});
+class WavexPaymentScreen extends StatelessWidget {
+  const WavexPaymentScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

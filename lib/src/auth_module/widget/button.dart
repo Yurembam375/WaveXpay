@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class CustomButton extends StatelessWidget {
+  final VoidCallback onTap;
   final String label;
-  
-  const CustomButton({super.key, required this.label});
+
+  const CustomButton({super.key, required this.label, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,7 @@ class CustomButton extends StatelessWidget {
         height: 50.h, // Use ScreenUtil to scale button height
         width: double.infinity,
         child: ElevatedButton(
-          onPressed: () {
-            
-          },
+          onPressed: onTap,
           style: ButtonStyle(
             backgroundColor: WidgetStateProperty.all(
               HexColor("#05099F"),

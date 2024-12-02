@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 @RoutePage()
-class Orscreen extends StatelessWidget {
-  const Orscreen({super.key});
+class OrScreen extends StatelessWidget {
+  const OrScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

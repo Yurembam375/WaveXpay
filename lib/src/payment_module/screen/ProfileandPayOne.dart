@@ -5,19 +5,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:wavexpay/router/router.gr.dart';
 
-import 'package:wavexpay/widget/moneyTanferCard.dart';
-import 'package:wavexpay/widget/paymentCard.dart';
-import 'package:wavexpay/widget/rowWidget.dart';
+import 'package:wavexpay/src/dashboard/widget/moneyTanferCard.dart';
+import 'package:wavexpay/src/payment_module/widget/paymentCard.dart';
+import 'package:wavexpay/src/payment_module/widget/rowWidget.dart';
 
 @RoutePage()
-class Profileandpayone extends StatefulWidget {
-  const Profileandpayone({super.key});
+class ProfileandpayoneScreen extends StatefulWidget {
+  const ProfileandpayoneScreen({super.key});
 
   @override
-  State<Profileandpayone> createState() => _ProfileandpayoneState();
+  State<ProfileandpayoneScreen> createState() => _ProfileandpayoneScreenState();
 }
 
-class _ProfileandpayoneState extends State<Profileandpayone> {
+class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
   bool _switchValue = true;
   @override
   Widget build(BuildContext context) {

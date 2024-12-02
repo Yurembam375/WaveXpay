@@ -11,28 +11,35 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: LoginRoute.page),
         AutoRoute(page: OtpRoute.page),
         AutoRoute(
-          page: Tire2screen.page,
+          page: Tire2Route.page,
         ),
         AutoRoute(
-          page: Tire3screen.page,
+          page: Tire3Route.page,
         ),
         AutoRoute(page: DashboardRoute.page, children: [
-          AutoRoute(page: Homescreen.page),
-          AutoRoute(page: Orscreen.page),
-          AutoRoute(page: Transectionscreen.page)
+          AutoRoute(page: HomeRoute.page),
+          AutoRoute(page: OrRoute.page),
+          AutoRoute(page: TransectionRoute.page)
         ]),
         AutoRoute(
-          page: Billscreen.page,
+          page: BillRoute.page,
         ),
         AutoRoute(
-          page: Profileandpayone.page,
+          page: ProfileandpayoneRoute.page,
         ),
         AutoRoute(
-          page: Paytocontactscreen.page,
+          page: PaytocontactRoute.page,
         ),
         AutoRoute(
-          page: Paymentscreen.page,
+          page: PaymentRoute.page,
         ),
-        AutoRoute(page: Wavexpaymentscreen.page, initial: true)
+        AutoRoute(page: WavexPaymentRoute.page),
+        AutoRoute(
+          page: ToAccountRoute.page,
+        ),
+        AutoRoute(
+          page: CheckbalRoute.page,
+        ),
+        AutoRoute(page: UpisettingRoute.page, initial: true),
       ];
 }

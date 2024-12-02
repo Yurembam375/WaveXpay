@@ -2,11 +2,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:wavexpay/widget/actionCard.dart';
+import 'package:wavexpay/src/dashboard/widget/actionCard.dart';
 
 @RoutePage()
-class Billscreen extends StatelessWidget {
-  const Billscreen({super.key});
+class BillScreen extends StatelessWidget {
+  const BillScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

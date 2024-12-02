@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 @RoutePage()
-class Tire3screen extends StatelessWidget {
-  const Tire3screen({super.key});
+class Tire3Screen extends StatelessWidget {
+  const Tire3Screen({super.key});
 
   @override
   Widget build(BuildContext context) {

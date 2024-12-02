@@ -3,19 +3,19 @@ import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:wavexpay/widget/chart.dart';
-import 'package:wavexpay/widget/tranZwidget.dart';
-import 'package:wavexpay/widget/viewAllbutton.dart';
+import 'package:wavexpay/src/dashboard/widget/chart.dart';
+import 'package:wavexpay/src/dashboard/widget/tranZwidget.dart';
+import 'package:wavexpay/src/dashboard/widget/viewAllbutton.dart';
 
 @RoutePage()
-class Transectionscreen extends StatefulWidget {
-  const Transectionscreen({super.key});
+class TransectionScreen extends StatefulWidget {
+  const TransectionScreen({super.key});
 
   @override
-  State<Transectionscreen> createState() => _TransectionscreenState();
+  State<TransectionScreen> createState() => _TransectionScreenState();
 }
 
-class _TransectionscreenState extends State<Transectionscreen> {
+class _TransectionScreenState extends State<TransectionScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
