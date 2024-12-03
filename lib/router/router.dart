@@ -16,7 +16,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: Tire3Route.page,
         ),
-        AutoRoute(page: DashboardRoute.page, children: [
+        AutoRoute(page: DashboardRoute.page, initial: true, children: [
           AutoRoute(page: HomeRoute.page),
           AutoRoute(page: OrRoute.page),
           AutoRoute(page: TransectionRoute.page)
@@ -33,13 +33,20 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: PaymentRoute.page,
         ),
-        AutoRoute(page: WavexPaymentRoute.page),
+        AutoRoute(
+          page: WavexPaymentRoute.page,
+        ),
         AutoRoute(
           page: ToAccountRoute.page,
         ),
         AutoRoute(
           page: CheckbalRoute.page,
         ),
-        AutoRoute(page: UpisettingRoute.page, initial: true),
+        AutoRoute(
+          page: UpisettingRoute.page,
+        ),
+        AutoRoute(
+          page: GiftcardRoute.page,
+        )
       ];
 }

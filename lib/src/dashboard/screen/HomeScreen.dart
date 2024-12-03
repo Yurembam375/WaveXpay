@@ -86,10 +86,12 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 150.h,
+                //height: 150.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.primary,
+                    //color: Theme.of(context).colorScheme.primary,
+                    color: HexColor("#EFEFEF"),
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -134,7 +136,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 170.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
@@ -150,11 +152,12 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           const Text(
                             "Bill & Recharge",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           Viewallbutton(
                             onpress: () {
-                              context.pushRoute( const BillRoute());
+                              context.pushRoute(const BillRoute());
                             },
                           )
                         ],
@@ -173,15 +176,15 @@ class HomeScreen extends StatelessWidget {
                             label: "Credit",
                             onTap: () {}),
                         BillandRechargeCard(
-                            imagePath: "assets/image/elc.png",
+                            imagePath: "assets/image/elc2.png",
                             label: "Electricity",
                             onTap: () {}),
                         BillandRechargeCard(
-                            imagePath: "assets/image/ion_home-outline.png",
+                            imagePath: "assets/image/home.png",
                             label: "Rent",
                             onTap: () {}),
                         BillandRechargeCard(
-                            imagePath: "assets/image/boardband.png",
+                            imagePath: "assets/image/boardband2.png",
                             label: "Boardband",
                             onTap: () {}),
                       ],
@@ -196,16 +199,16 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 children: [
                   TravelCardWidget(
-                    title: "Travels",
+                    title: "Travel",
                     travelOptions: const [
                       {
-                        "imagePath": "assets/image/flight.png",
+                        "imagePath": "assets/image/flight2.png",
                         "label": "Flight"
                       },
-                      {"imagePath": "assets/image/bus.png", "label": "Bus"},
-                      {"imagePath": "assets/image/train.png", "label": "Train"},
+                      {"imagePath": "assets/image/bus2.png", "label": "Bus"},
+                      {"imagePath": "assets/image/train2.png", "label": "Train"},
                       {
-                        "imagePath": "assets/image/hotel.png",
+                        "imagePath": "assets/image/hotel2.png",
                         "label": "Hotels"
                       },
                     ],
@@ -217,11 +220,11 @@ class HomeScreen extends StatelessWidget {
                     title: "Travel Services",
                     travelOptions: const [
                       {
-                        "imagePath": "assets/image/Group 1351.png",
+                        "imagePath": "assets/image/aircab.png",
                         "label": "Airport\nCabs"
                       },
                       {
-                        "imagePath": "assets/image/scuba 1.png",
+                        "imagePath": "assets/image/suba.png",
                         "label": "Travel\nActivities"
                       },
                       {
@@ -229,7 +232,7 @@ class HomeScreen extends StatelessWidget {
                         "label": "Visa2\nFly"
                       },
                       {
-                        "imagePath": "assets/image/Group 1342.png",
+                        "imagePath": "assets/image/trav.png",
                         "label": "Travel\nInsurance"
                       },
                     ],

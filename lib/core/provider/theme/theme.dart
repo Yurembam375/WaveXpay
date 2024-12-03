@@ -5,9 +5,9 @@ ThemeData lightMode = ThemeData(
     brightness: Brightness.light,
     colorScheme: ColorScheme.light(
       surface: HexColor("#FFFFFF"),
-      primary: HexColor("#ECECFA"),
+      primary: HexColor("#FFFFFF"),
       onPrimaryContainer: HexColor("#FFFFFF"),
-      secondary: HexColor("#CFCFEC"),
+      secondary: HexColor("#F0F0FF"),
     ));
 ThemeData darkMode = ThemeData(
   brightness: Brightness.dark,

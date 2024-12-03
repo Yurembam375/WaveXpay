@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:wavexpay/src/payment_module/widget/UpiIDwidget.dart';
+import 'package:wavexpay/src/payment_module/widget/UpiNoWidget.dart';
 
 class CustomTabBar extends StatefulWidget {
   const CustomTabBar({super.key});
@@ -120,26 +122,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
         ),
         // Tab Content
         Expanded(
-          child: selectedIndex == 0
-              ? Center(
-                  child: Text(
-                    'UPI ID Content',
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      color: HexColor("#05099F"),
-                    ),
-                  ),
-                )
-              : Center(
-                  child: Text(
-                    'UPI NUMBER Content',
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      color: HexColor("#05099F"),
-                    ),
-                  ),
-                ),
-        ),
+            child: selectedIndex == 0 ? const UpiIdwidget() : const UpiNoWidget()),
       ],
     );
   }

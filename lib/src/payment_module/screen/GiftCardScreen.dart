@@ -2,18 +2,16 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:wavexpay/src/payment_module/widget/customTabbar.dart';
-
 @RoutePage()
-class UpisettingScreen extends StatelessWidget {
-  const UpisettingScreen({super.key});
+class GiftcardScreen extends StatelessWidget {
+  const GiftcardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
+      appBar: AppBar(
           title: Text(
-            "UPI Settings",
+            "Gift Card",
             style: TextStyle(color: Colors.white, fontSize: 20.sp),
           ),
           centerTitle: true,
@@ -37,6 +35,6 @@ class UpisettingScreen extends StatelessWidget {
             ),
           ],
         ),
-        body:  const CustomTabBar());
+    );
   }
 }

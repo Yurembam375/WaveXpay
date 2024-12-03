@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 class TravelCardWidget extends StatelessWidget {
   final String title;
@@ -19,6 +18,7 @@ class TravelCardWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10),
         height: 140.h,
         width: 360.w,
         decoration: BoxDecoration(
@@ -33,10 +33,9 @@ class TravelCardWidget extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    title,
-                    style: const TextStyle(fontSize: 20),
-                  ),
+                  Text(title,
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold)),
                 ],
               ),
             ),
@@ -67,7 +66,6 @@ class TravelCardWidget extends StatelessWidget {
                                 option["imagePath"]!,
                                 height: 50,
                                 width: 40,
-                                color: HexColor("#05099F"),
                               ),
                             ),
                           ),

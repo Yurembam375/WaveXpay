@@ -292,12 +292,21 @@ class BillScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 170.h,
+                //  height: 170.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
-                    //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 0.5, // Spread radius
+                        blurRadius: 1, // Blur radius
+                        offset: const Offset(0, 1),
+                        // Offset in the X and Y direction
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -322,8 +331,9 @@ class BillScreen extends StatelessWidget {
                         ActionCard(
                             title: "Mobile\nRecharge",
                             imagePath:
-                                "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
+                                "assets/image/recharge.png",
                             onTap: () {}),
+
                         ActionCard(
                             title: "FASTag\n Recharge",
                             imagePath: "assets/image/fast.png",
@@ -346,12 +356,22 @@ class BillScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 250.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                // height: 250.h,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 0.5, // Spread radius
+                        blurRadius: 1, // Blur radius
+                        offset: const Offset(0, 1),
+                        // Offset in the X and Y direction
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -384,7 +404,7 @@ class BillScreen extends StatelessWidget {
                         ActionCard(
                             title: "Electricity",
                             imagePath:
-                                "assets/image/material-symbols_laptop-car-outline-sharp.png",
+                                "assets/image/elc2.png",
                             onTap: () {}),
                         ActionCard(
                             title: "Cylinder",
@@ -398,17 +418,17 @@ class BillScreen extends StatelessWidget {
                         ActionCard(
                             title: "Pospaid",
                             imagePath:
-                                "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
+                                "assets/image/recharge.png",
                             onTap: () {}),
                         ActionCard(
                             title: "Broadband",
                             imagePath:
-                                "assets/image/material-symbols_laptop-car-outline-sharp (2).png",
+                                "assets/image/boardband2.png",
                             onTap: () {}),
                         ActionCard(
                             title: "Credit Card",
                             imagePath:
-                                "assets/image/bi_credit-card-2-front.png",
+                                "assets/image/credit.png",
                             onTap: () {}),
                         ActionCard(
                             title: "Pipe Gas",
@@ -423,12 +443,22 @@ class BillScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 170.h,
+                // height: 170.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 0.5, // Spread radius
+                        blurRadius: 1, // Blur radius
+                        offset: const Offset(0, 1),
+                        // Offset in the X and Y direction
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -453,7 +483,7 @@ class BillScreen extends StatelessWidget {
                         ActionCard(
                             title: "Mobile\nRecharge",
                             imagePath:
-                                "assets/image/material-symbols_laptop-car-outline-sharp (1).png",
+                                "assets/image/recharge.png",
                             onTap: () {}),
                         ActionCard(
                             title: "FASTag\n Recharge",
@@ -476,12 +506,22 @@ class BillScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 170.h,
+                // height: 170.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 0.5, // Spread radius
+                        blurRadius: 1, // Blur radius
+                        offset: const Offset(0, 1),
+                        // Offset in the X and Y direction
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -530,12 +570,22 @@ class BillScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 300.h,
+                // height: 300.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 0.5, // Spread radius
+                        blurRadius: 1, // Blur radius
+                        offset: const Offset(0, 1),
+                        // Offset in the X and Y direction
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -577,18 +627,27 @@ class BillScreen extends StatelessWidget {
                             onTap: () {}),
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          ActionCard(
-                              title: "Loan\n Repayment",
-                              imagePath:
-                                  "assets/image/hugeicons_money-bag-01.png",
-                              onTap: () {}),
-                        ],
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        ActionCard(
+                            title: "Loan\n Repayment",
+                            imagePath:
+                                "assets/image/hugeicons_money-bag-01.png",
+                            onTap: () {}),
+                        const SizedBox(
+                          height: 70,
+                          width: 60,
+                        ),
+                        const SizedBox(
+                          height: 70,
+                          width: 60,
+                        ),
+                        const SizedBox(
+                          height: 70,
+                          width: 60,
+                        ),
+                      ],
                     ),
                   ],
                 ),
@@ -597,12 +656,22 @@ class BillScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 300.h,
+                // height: 300.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
                     //color: HexColor("#CFCFEC"),
-                    borderRadius: BorderRadius.circular(10)),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5), // Shadow color
+                        spreadRadius: 0.5, // Spread radius
+                        blurRadius: 1, // Blur radius
+                        offset: const Offset(0, 1),
+                        // Offset in the X and Y direction
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(20)),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [

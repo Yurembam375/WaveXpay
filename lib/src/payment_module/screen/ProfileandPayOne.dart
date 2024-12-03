@@ -33,7 +33,7 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
           onPressed: () {
             context.router.popAndPush(const DashboardRoute());
           },
-          icon: const Icon( 
+          icon: const Icon(
             Icons.keyboard_arrow_left,
             color: Colors.white,
           ),
@@ -169,7 +169,8 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 280.h,
+                // height: 280.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white, // Background color for TextField
@@ -188,13 +189,14 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Money Transfers",
-                            style: TextStyle(fontSize: 20),
+                            "Payment Methods",
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
@@ -224,33 +226,38 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
                     SizedBox(
                       height: 10.h,
                     ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 30.h),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          MoneyTransferCard(
-                              title: "UPI Lite",
-                              imagePath: "assets/image/Vector (11).png",
-                              onTap: () {}),
-                          SizedBox(
-                            width: 40.w,
-                          ),
-                          MoneyTransferCard(
-                              title: "RuPay Credit\non UPIs",
-                              imagePath: "assets/image/Group 1167.png",
-                              onTap: () {}),
-                          SizedBox(
-                            width: 40.w,
-                          ),
-                          MoneyTransferCard(
-                              title: "Credit Line\non UPI",
-                              imagePath: "assets/image/upi-payment-icon 2.png",
-                              onTap: () {}),
-                        ],
-                      ),
+                    // Padding(
+                    //   padding: EdgeInsets.symmetric(horizontal: 30.h),
+                    // child:
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      // crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        MoneyTransferCard(
+                            title: "UPI Lite",
+                            imagePath: "assets/image/Vector (11).png",
+                            onTap: () {}),
+                        // SizedBox(
+                        //   width: 40.w,
+                        // ),
+                        MoneyTransferCard(
+                            title: "RuPay Credit\non UPIs",
+                            imagePath: "assets/image/Group 1167.png",
+                            onTap: () {}),
+                        // SizedBox(
+                        //   width: 40.w,
+                        // ),
+                        MoneyTransferCard(
+                            title: "Credit Line\non UPI",
+                            imagePath: "assets/image/upi-payment-icon 2.png",
+                            onTap: () {}),
+                        const SizedBox(
+                          height: 60,
+                          width: 60,
+                        ),
+                      ],
                     ),
+                    //),
                   ],
                 ),
               ),
@@ -258,7 +265,8 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 150.h,
+                //  height: 150.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                     color: Theme.of(context).colorScheme.secondary,
@@ -277,34 +285,34 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
                           Text(
                             "Payment Management",
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           ),
                         ],
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.h),
+                      padding: EdgeInsets.symmetric(horizontal: 20.h,vertical: 5),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           PaymentCard(
                               title: "AutoPay",
-                              imagePath: "assets/image/Vector (13).png",
+                              imagePath: "assets/image/autopay.png",
                               onTap: () {}),
                           SizedBox(
                             width: 32.w,
                           ),
                           PaymentCard(
                               title: "International",
-                              imagePath: "assets/image/Group (5).png",
+                              imagePath: "assets/image/inter.png",
                               onTap: () {}),
                           SizedBox(
                             width: 32.w,
                           ),
                           PaymentCard(
                               title: "UPI Settings",
-                              imagePath: "assets/image/Group (4).png",
+                              imagePath: "assets/image/wal.png",
                               onTap: () {}),
                         ],
                       ),
@@ -367,7 +375,8 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 450.h,
+                //height: 450.h,
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white, // Background color for TextField
@@ -475,7 +484,7 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 270.h,
+                  padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white, // Background color for TextField
@@ -588,11 +597,11 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 120.h,
+               padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white, // Background color for TextField
-                  borderRadius: BorderRadius.circular(30), // Rounded corners
+                  borderRadius: BorderRadius.circular(20), // Rounded corners
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5), // Shadow color
@@ -606,20 +615,6 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Security",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
                     RowWidget(
                         title: "About Wavexpay",
                         subtitle: "Privacy policy, Terms & About Wavexpay ",
@@ -638,11 +633,11 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Container(
-                height: 120.h,
+               padding: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white, // Background color for TextField
-                  borderRadius: BorderRadius.circular(30), // Rounded corners
+                  borderRadius: BorderRadius.circular(20), // Rounded corners
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5), // Shadow color
@@ -656,20 +651,6 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Security",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ),
                     RowWidget(
                         title: "Logout",
                         subtitle: "",
