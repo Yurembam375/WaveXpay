@@ -121,8 +121,8 @@ class WavexPaymentScreen extends StatelessWidget {
                           "assets/image/Vector (24).png",
                           height: 15,
                         ),
-                        floatingLabelBehavior: FloatingLabelBehavior
-                            .always, // Makes label float on focus
+                        // floatingLabelBehavior: FloatingLabelBehavior
+                        //     .always, // Makes label float on focus
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.grey.shade400),
                         ),

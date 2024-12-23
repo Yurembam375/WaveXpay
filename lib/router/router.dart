@@ -48,6 +48,24 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: GiftcardRoute.page,
         ),
-        AutoRoute(page: AutopayRoute.page, initial: true)
+        AutoRoute(page: AutopayRoute.page),
+        AutoRoute(
+          page: UpiLiteRoute.page,
+        ),
+        AutoRoute(
+          page: UpiInterRoute.page,
+        ),
+        AutoRoute(page: RewardRoute.page),
+        AutoRoute(page: PayyourcreditRoute.page),
+        AutoRoute(
+          page: MobileRechargeRoute.page,
+        ),
+        AutoRoute(
+          page: AddDebitcardRoute.page,
+        ),
+        AutoRoute(
+          page: BasicrentRoute.page,
+        ),
+        AutoRoute(page: RentRoute.page, initial: true)
       ];
 }
