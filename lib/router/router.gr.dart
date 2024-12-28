@@ -9,6 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i28;
+import 'package:flutter/material.dart' as _i29;
 import 'package:wavexpay/src/auth_module/screen/FirstScreen.dart' as _i7;
 import 'package:wavexpay/src/auth_module/screen/LoginScreen.dart' as _i10;
 import 'package:wavexpay/src/auth_module/screen/OtpScreen.dart' as _i13;
@@ -142,10 +143,13 @@ class CheckbalRoute extends _i28.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.DashboardScreen]
-class DashboardRoute extends _i28.PageRouteInfo<void> {
-  const DashboardRoute({List<_i28.PageRouteInfo>? children})
-      : super(
+class DashboardRoute extends _i28.PageRouteInfo<DashboardRouteArgs> {
+  DashboardRoute({
+    _i29.Key? key,
+    List<_i28.PageRouteInfo>? children,
+  }) : super(
           DashboardRoute.name,
+          args: DashboardRouteArgs(key: key),
           initialChildren: children,
         );
 
@@ -154,9 +158,22 @@ class DashboardRoute extends _i28.PageRouteInfo<void> {
   static _i28.PageInfo page = _i28.PageInfo(
     name,
     builder: (data) {
-      return const _i6.DashboardScreen();
+      final args = data.argsAs<DashboardRouteArgs>(
+          orElse: () => const DashboardRouteArgs());
+      return _i6.DashboardScreen(key: args.key);
     },
   );
+}
+
+class DashboardRouteArgs {
+  const DashboardRouteArgs({this.key});
+
+  final _i29.Key? key;
+
+  @override
+  String toString() {
+    return 'DashboardRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

@@ -31,7 +31,7 @@ class _ProfileandpayoneScreenState extends State<ProfileandpayoneScreen> {
         backgroundColor: HexColor("#04076E"),
         leading: IconButton(
           onPressed: () {
-            context.router.popAndPush(const DashboardRoute());
+            context.router.popAndPush(DashboardRoute());
           },
           icon: const Icon(
             Icons.keyboard_arrow_left,

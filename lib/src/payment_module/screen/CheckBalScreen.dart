@@ -34,7 +34,8 @@ class CheckbalScreen extends StatelessWidget {
               ),
               onPressed: () {},
             ),
-          ]),
+          ],
+          ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
         child: Column(

@@ -16,7 +16,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: Tire3Route.page,
         ),
-        AutoRoute(page: DashboardRoute.page, children: [
+        AutoRoute(page: DashboardRoute.page, initial: true, children: [
           AutoRoute(page: HomeRoute.page),
           AutoRoute(page: OrRoute.page),
           AutoRoute(page: TransectionRoute.page)
@@ -66,6 +66,8 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: BasicrentRoute.page,
         ),
-        AutoRoute(page: RentRoute.page, initial: true)
+        AutoRoute(
+          page: RentRoute.page,
+        )
       ];
 }

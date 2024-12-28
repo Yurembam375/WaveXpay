@@ -134,7 +134,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                     context.router.push(const DashboardRoute());
+                     context.router.push(DashboardRoute());
                   },
                   style: ButtonStyle(
                     backgroundColor: WidgetStateProperty.all(
